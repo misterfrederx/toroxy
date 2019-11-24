@@ -1,7 +1,14 @@
 import os
 
 
-def parse(filename, separator=' ', collapsed_head=True):
+def parse(filename, separator=' ', collapsed_head=True) -> dict:
+    """
+    Helper that read a file of type key value with a separator and built a dict from it
+    :param filename:
+    :param separator:
+    :param collapsed_head:
+    :return:
+    """
     config = {}
     if os.path.exists(filename):
         for file_line in open(filename, 'r'):
